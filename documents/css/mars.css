@@ -1,0 +1,106 @@
+
+.buttonStyleMars {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  background: none transparent;
+  border: hidden;
+  color: #AA8877;
+  text-align: left;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: 10px;
+  width: 120px;
+  font-size:10px;
+}
+.buttonA1stac {
+    position: fixed;
+    top: 120px;
+    left: 40px;
+    background: none transparent;
+    border: hidden;
+    border-left: 3px double #333304;
+    color: #AA8877;
+    text-align: left;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 10px;
+    width: 120px;
+    font-size:15px;
+  }
+  .buttonAdrummer {
+    position: fixed;
+    top: 160px;
+    left: 40px;
+    background: none transparent;
+    border: hidden;
+    border-left: 3px double #333304;
+    color: #AA8877;
+    text-align: left;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 10px;
+    width: 120px;
+    font-size:15px;
+  }
+  .buttonContactable {
+    position: fixed;
+    top: 200px;
+    left: 40px;
+    background: none transparent;
+    border: hidden;
+    border-left: 3px double #333304;
+    color: #AA8877;
+    text-align: left;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 10px;
+    width: 120px;
+    font-size:15px;
+  }
+  .header {
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    background: none transparent;
+    border-left: 3px double #333304;
+    color: #CCAA99;
+    text-align: left;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 10px;
+    width: 350px;
+    font-size:30px;
+  }
+  .iframe {
+    width: 1000px;
+    height: 800px;
+    position: absolute;
+    top: 150px;
+    left: 200px;
+    background: none transparent;
+    border: 0px;
+  }
+  .nav {
+    position: fixed;
+    top: 120px;
+    left: 40px;
+  }
+  .footer {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 11px;
+    color: #665533
+  }
+  .body {
+    background-image: url(../pics/mars.jpg);
+    background-repeat: no-repeat;
+    background-color: #000000;
+    background-size: cover;
+  }

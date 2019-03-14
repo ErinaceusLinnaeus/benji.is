@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html id="html" lang="de">
+<html id="html" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Benji is...</title>
     <link id="stylesheet" rel="stylesheet" type="text/css" href="documents/css/mars.css" />
   </head>
-  <body class="body">
-
+  <body class="body" onload="funcLoad()">
 
     <footer id="footer" class="footer">
       IMPRESSUM:<br><br>
@@ -23,37 +22,110 @@
     </header>
 
     <nav id="nav" class="nav">
-      <button class="buttonStyleMars" onclick="funcStyleMars()">O</button>
-      <button class="buttonA1stac" onclick="func1stac()">...a 1st AC</button>
-      <button class="buttonAdrummer" onclick="funcDrummer()">...a drummer</button>
-      <button class="buttonContactable" onclick="funcContactable()">...contactable</button>
+      <button id="buttonStyleMars" class="buttonStyleMars" onclick="funcStyleMars()">O</button>
+      <button id="buttonA1stac"class="button" onclick="func1stac()">...a 1st AC</button>
+      <button id="buttonAMusician"class="button" onclick="funcMusician()">...a musician</button>
+      <button id="buttonContactable"class="button" onclick="funcContactable()">...contactable</button>
+      <button id="buttonFilmography"class="button" onclick="funcFilmography()">Filmography</button>
+      <button id="buttonFilmPics"class="button" onclick="funcFilmPics()">Pictures</button>
+      <button id="buttonFilmLinks"class="button" onclick="funcFilmLinks()">Links</button>
+      <button id="buttonMusicDrums"class="button" onclick="funcMusicDrums()">Drums</button>
+      <button id="buttonMusicBass"class="button" onclick="funcMusicBass()">Bass</button>
+      <button id="buttonMusicBands"class="button" onclick="funcMusicBands()">Bands</button>
+      <button id="buttonMusicConcerts"class="button" onclick="funcMusicConcerts()">Concerts</button>
+      <button id="buttonMusicMedia"class="button" onclick="funcMusicMedia()">Media</button>
 
       <script>
-        var language = document.getElementById("html").lang;
+
+        function funcLoad() {
+
+          document.getElementById("buttonA1stac").style.top = "120px";
+          document.getElementById("buttonA1stac").style.left = "40px";
+          document.getElementById("buttonAMusician").style.top = "160px";
+          document.getElementById("buttonAMusician").style.left = "40px";
+          document.getElementById("buttonContactable").style.top = "200px";
+          document.getElementById("buttonContactable").style.left = "40px";
+          document.getElementById("buttonFilmography").style.top = "160px";
+          document.getElementById("buttonFilmography").style.left = "-600px";
+          document.getElementById("buttonFilmPics").style.top = "200px";
+          document.getElementById("buttonFilmPics").style.left = "-600px";
+          document.getElementById("buttonFilmLinks").style.top = "240px";
+          document.getElementById("buttonFilmLinks").style.left = "-600px";
+          document.getElementById("buttonMusicDrums").style.top = "200px";
+          document.getElementById("buttonMusicDrums").style.left = "-600px";
+          document.getElementById("buttonMusicBass").style.top = "240px";
+          document.getElementById("buttonMusicBass").style.left = "-600px";
+          document.getElementById("buttonMusicBands").style.top = "280px";
+          document.getElementById("buttonMusicBands").style.left = "-600px";
+          document.getElementById("buttonMusicConcerts").style.top = "320px";
+          document.getElementById("buttonMusicConcerts").style.left = "-600px";
+          document.getElementById("buttonMusicMedia").style.top = "360px";
+          document.getElementById("buttonMusicMedia").style.left = "-600px";
+        }
+
         function funcStyleMars() {
+
           document.getElementById("stylesheet").href = "documents/css/mars.css";
         }
+
           function funcContactable() {
-            if (language == "en")
-              document.getElementById("header").innerHTML = "Benji is contactable";
-            else if (language == "de")
-              document.getElementById("header").innerHTML = "Benji ist kontaktierbar";
+
+            document.getElementById("header").innerHTML = "Benji is contactable";
             document.getElementById("iframe").src = "contactable.html";
+
+            document.getElementById("buttonA1stac").style.top = "120px";
+            document.getElementById("buttonAMusician").style.top = "160px";
+            document.getElementById("buttonContactable").style.top = "200px";
+            document.getElementById("buttonFilmography").style.left = "-600px";
+            document.getElementById("buttonFilmPics").style.left = "-600px";
+            document.getElementById("buttonFilmLinks").style.left = "-600px";
+            document.getElementById("buttonMusicDrums").style.left = "-600px";
+            document.getElementById("buttonMusicBass").style.left = "-600px";
+            document.getElementById("buttonMusicBands").style.left = "-600px";
+            document.getElementById("buttonMusicConcerts").style.left = "-600px";
+            document.getElementById("buttonMusicMedia").style.left = "-600px";
           }
+
           function func1stac() {
-            if (language == "en")
-              document.getElementById("header").innerHTML = "Benji is a 1st AC";
-            else if (language == "de")
-              document.getElementById("header").innerHTML = "Benji ist 1.Kameraassistent";
-            document.getElementById("iframe").src = "a1stAC.html";
+
+            document.getElementById("header").innerHTML = "Benji is a 1st AC";
+            document.getElementById("iframe").src = "a1stac.html";
+
+            document.getElementById("buttonAMusician").style.top = "280px";
+            document.getElementById("buttonContactable").style.top = "320px";
+            document.getElementById("buttonFilmography").style.left = "60px";
+            document.getElementById("buttonFilmPics").style.left = "60px";
+            document.getElementById("buttonFilmLinks").style.left = "60px";
+            document.getElementById("buttonMusicDrums").style.left = "-600px";
+            document.getElementById("buttonMusicBass").style.left = "-600px";
+            document.getElementById("buttonMusicBands").style.left = "-600px";
+            document.getElementById("buttonMusicConcerts").style.left = "-600px";
+            document.getElementById("buttonMusicMedia").style.left = "-600px";
           }
-          function funcDrummer() {
-            if (language == "en")
-              document.getElementById("header").innerHTML = "Benji is a drummer";
-            else if (language == "de")
-              document.getElementById("header").innerHTML = "Benji ist Schlagzeuger";
+
+          function funcFilmography() {
+
+            document.getElementById("header").innerHTML = "Benji is a 1st AC";
+            document.getElementById("iframe").src = "documents/pdf/Filmography.pdf";
+          }
+
+          function funcMusician() {
+
+            document.getElementById("header").innerHTML = "Benji is a drummer";
             document.getElementById("iframe").src = "adrummer.html";
+            
+            document.getElementById("buttonAMusician").style.top = "160px";
+            document.getElementById("buttonContactable").style.top = "400px";
+            document.getElementById("buttonFilmography").style.left = "-600px";
+            document.getElementById("buttonFilmPics").style.left = "-600px";
+            document.getElementById("buttonFilmLinks").style.left = "-600px";
+            document.getElementById("buttonMusicDrums").style.left = "60px";
+            document.getElementById("buttonMusicBass").style.left = "60px";
+            document.getElementById("buttonMusicBands").style.left = "60px";
+            document.getElementById("buttonMusicConcerts").style.left = "60px";
+            document.getElementById("buttonMusicMedia").style.left = "60px";
           }
+
       </script>
 
     </nav>

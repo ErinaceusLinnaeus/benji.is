@@ -61,8 +61,8 @@
 }
 .footer {
   position: fixed;
-  bottom: 10px;
-  left: 10px;
+  bottom: 15px;
+  left: 15px;
   font-size: 11px;
   color: #665533
 }

@@ -9,12 +9,6 @@
   <body class="body" onload="funcLoad()">
 
     <footer id="footer" class="footer">
-      IMPRESSUM:<br><br>
-      Benjamin Schmid<br>
-      Friedrich-Ebert-Str. 25,<br>
-      73730 Esslingen<br>
-      mail@benji.is, +4915128182699<br>
-      USt-ID: DE298312883
     </footer>
 
     <header id="header" class="header">
@@ -33,7 +27,8 @@
       <button id="buttonMusicBass"class="button" onclick="funcMusicBass()">Bass</button>
       <button id="buttonMusicBands"class="button" onclick="funcMusicBands()">Bands</button>
       <button id="buttonMusicConcerts"class="button" onclick="funcMusicConcerts()">Concerts</button>
-      <button id="buttonMusicMedia"class="button" onclick="funcMusicMedia()">Media</button>
+      <button id="buttonMusicMedia" class="button" onclick="funcMusicMedia()">Media</button>
+      <button id="buttonImpressum" class="button" onclick="funcImpressum()">IMPRESSUM:</button>
 
       <script>
 
@@ -61,6 +56,9 @@
           document.getElementById("buttonMusicConcerts").style.left = "-600px";
           document.getElementById("buttonMusicMedia").style.top = "360px";
           document.getElementById("buttonMusicMedia").style.left = "-600px";
+          document.getElementById("buttonImpressum").style.bottom = "20px";
+          document.getElementById("buttonImpressum").style.left = "6px";
+          document.getElementById("buttonImpressum").style.border = "hidden";
         }
 
         function funcStyleMars() {
@@ -113,7 +111,7 @@
 
             document.getElementById("header").innerHTML = "Benji is a drummer";
             document.getElementById("iframe").src = "adrummer.html";
-            
+
             document.getElementById("buttonAMusician").style.top = "160px";
             document.getElementById("buttonContactable").style.top = "400px";
             document.getElementById("buttonFilmography").style.left = "-600px";
@@ -124,6 +122,11 @@
             document.getElementById("buttonMusicBands").style.left = "60px";
             document.getElementById("buttonMusicConcerts").style.left = "60px";
             document.getElementById("buttonMusicMedia").style.left = "60px";
+          }
+
+          function funcImpressum() {
+
+            document.getElementById("footer").innerHTML = "Benjamin Schmid, Friedrich-Ebert-Str. 25, 73730 Esslingen, mail@benji.is, +4915128182699, USt-ID: DE298312883";
           }
 
       </script>

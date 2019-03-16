@@ -43,6 +43,10 @@
     <script>
       //To check if the impressum is clicked.
       var impressed;
+      //To check the latest opened tab.
+      var a1stac;
+      var amusician;
+      var contacted;
 
       function funcLoad() {
 
@@ -74,88 +78,144 @@
 
         document.getElementById("header").innerHTML = "Benji.is";
 
+        a1stac = false;
+        amusician = false;
+        contacted = false;
         impressed = false;
       }
 
       function funcStyleMars() {
 
         document.getElementById("stylesheet").href = "documents/css/mars.css";
-        document.getElementById("header").innerHTML = "Benji.is";
+        document.getElementById("header").innerHTML = "Benji is mars-gazing";
       }
 
-        function funcContactable() {
+      function func1stac() {
 
-          document.getElementById("header").innerHTML = "Benji is contactable";
-          document.getElementById("iframe").src = "contactable.html";
+        a1stac = true;
+        amusician = false;
+        contacted = false;
 
-          document.getElementById("buttonA1stac").style.top = "120px";
-          document.getElementById("buttonAMusician").style.top = "160px";
-          document.getElementById("buttonContactable").style.top = "200px";
-          document.getElementById("buttonFilmography").style.left = "-600px";
-          document.getElementById("buttonFilmPics").style.left = "-600px";
-          document.getElementById("buttonFilmLinks").style.left = "-600px";
-          document.getElementById("buttonMusicDrums").style.left = "-600px";
-          document.getElementById("buttonMusicBass").style.left = "-600px";
-          document.getElementById("buttonMusicBands").style.left = "-600px";
-          document.getElementById("buttonMusicConcerts").style.left = "-600px";
-          document.getElementById("buttonMusicMedia").style.left = "-600px";
+        document.getElementById("header").innerHTML = "Benji is a 1st AC";
+        document.getElementById("iframe").src = "a1stac.html";
+
+        document.getElementById("buttonAMusician").style.top = "280px";
+        document.getElementById("buttonContactable").style.top = "320px";
+        document.getElementById("buttonFilmography").style.left = "60px";
+        document.getElementById("buttonFilmPics").style.left = "60px";
+        document.getElementById("buttonFilmLinks").style.left = "60px";
+        document.getElementById("buttonMusicDrums").style.left = "-600px";
+        document.getElementById("buttonMusicBass").style.left = "-600px";
+        document.getElementById("buttonMusicBands").style.left = "-600px";
+        document.getElementById("buttonMusicConcerts").style.left = "-600px";
+        document.getElementById("buttonMusicMedia").style.left = "-600px";
+      }
+
+      function funcFilmography() {
+
+        document.getElementById("header").innerHTML = "Benji is a 1st AC";
+        document.getElementById("iframe").src = "documents/pdf/Filmography.pdf";
+      }
+
+      function funcFilmPics() {
+
+      }
+
+      function funcFilmLinks() {
+
+      }
+
+      function funcMusician() {
+
+        a1stac = false;
+        amusician = true;
+        contacted = false;
+
+        document.getElementById("header").innerHTML = "Benji is a musician";
+        document.getElementById("iframe").src = "amusician.html";
+
+        document.getElementById("buttonAMusician").style.top = "160px";
+        document.getElementById("buttonContactable").style.top = "400px";
+        document.getElementById("buttonFilmography").style.left = "-600px";
+        document.getElementById("buttonFilmPics").style.left = "-600px";
+        document.getElementById("buttonFilmLinks").style.left = "-600px";
+        document.getElementById("buttonMusicDrums").style.left = "60px";
+        document.getElementById("buttonMusicBass").style.left = "60px";
+        document.getElementById("buttonMusicBands").style.left = "60px";
+        document.getElementById("buttonMusicConcerts").style.left = "60px";
+        document.getElementById("buttonMusicMedia").style.left = "60px";
+      }
+
+      function funcMusicDrums() {
+
+      }
+
+      function funcMusicBass() {
+
+      }
+
+      function funcMusicBands() {
+
+      }
+
+      function funcMusicConcerts() {
+
+      }
+
+      function funcMusicMedia() {
+
+      }
+
+      function funcContactable() {
+
+        a1stac = false;
+        amusician = false;
+        contacted = true;
+
+        document.getElementById("iframe").src = "contactable.html";
+
+        document.getElementById("buttonA1stac").style.top = "120px";
+        document.getElementById("buttonAMusician").style.top = "160px";
+        document.getElementById("buttonContactable").style.top = "200px";
+        document.getElementById("buttonFilmography").style.left = "-600px";
+        document.getElementById("buttonFilmPics").style.left = "-600px";
+        document.getElementById("buttonFilmLinks").style.left = "-600px";
+        document.getElementById("buttonMusicDrums").style.left = "-600px";
+        document.getElementById("buttonMusicBass").style.left = "-600px";
+        document.getElementById("buttonMusicBands").style.left = "-600px";
+        document.getElementById("buttonMusicConcerts").style.left = "-600px";
+        document.getElementById("buttonMusicMedia").style.left = "-600px";
+
+        document.getElementById("header").innerHTML = "Benji is contactable";
+      }
+      
+      function funcImpressum() {
+
+        if (!impressed) {
+          impressed = true;
+          document.getElementById("buttonImpressum").style.bottom = "100px";
+          document.getElementById("footer").innerHTML = "Benjamin Schmid<br>Friedrich-Ebert-Str. 25<br>73730 Esslingen<br><a href=mailto:mail@benji.is>mail@benji.is</a><br>+49 151 28182699<br>USt-ID: DE298312883";
+          document.getElementById("header").innerHTML = "Benji is impressed";
         }
+        else {
+          impressed = false;
+          document.getElementById("buttonImpressum").style.bottom = "20px";
+          document.getElementById("footer").innerHTML = "";
 
-        function func1stac() {
-
-          document.getElementById("header").innerHTML = "Benji is a 1st AC";
-          document.getElementById("iframe").src = "a1stac.html";
-
-          document.getElementById("buttonAMusician").style.top = "280px";
-          document.getElementById("buttonContactable").style.top = "320px";
-          document.getElementById("buttonFilmography").style.left = "60px";
-          document.getElementById("buttonFilmPics").style.left = "60px";
-          document.getElementById("buttonFilmLinks").style.left = "60px";
-          document.getElementById("buttonMusicDrums").style.left = "-600px";
-          document.getElementById("buttonMusicBass").style.left = "-600px";
-          document.getElementById("buttonMusicBands").style.left = "-600px";
-          document.getElementById("buttonMusicConcerts").style.left = "-600px";
-          document.getElementById("buttonMusicMedia").style.left = "-600px";
-        }
-
-        function funcFilmography() {
-
-          document.getElementById("header").innerHTML = "Benji is a 1st AC";
-          document.getElementById("iframe").src = "documents/pdf/Filmography.pdf";
-        }
-
-        function funcMusician() {
-
-          document.getElementById("header").innerHTML = "Benji is a musician";
-          document.getElementById("iframe").src = "amusician.html";
-
-          document.getElementById("buttonAMusician").style.top = "160px";
-          document.getElementById("buttonContactable").style.top = "400px";
-          document.getElementById("buttonFilmography").style.left = "-600px";
-          document.getElementById("buttonFilmPics").style.left = "-600px";
-          document.getElementById("buttonFilmLinks").style.left = "-600px";
-          document.getElementById("buttonMusicDrums").style.left = "60px";
-          document.getElementById("buttonMusicBass").style.left = "60px";
-          document.getElementById("buttonMusicBands").style.left = "60px";
-          document.getElementById("buttonMusicConcerts").style.left = "60px";
-          document.getElementById("buttonMusicMedia").style.left = "60px";
-        }
-
-        function funcImpressum() {
-
-          if (!impressed) {
-            impressed = true;
-            document.getElementById("buttonImpressum").style.bottom = "100px";
-            document.getElementById("footer").innerHTML = "Benjamin Schmid<br>Friedrich-Ebert-Str. 25<br>73730 Esslingen<br><a href=mailto:mail@benji.is>mail@benji.is</a><br>+49 151 28182699<br>USt-ID: DE298312883";
-            document.getElementById("header").innerHTML = "Benji is impressed";
+          if (contacted) {
+            document.getElementById("header").innerHTML = "Benji is contactable";
+          }
+          else if (a1stac) {
+            document.getElementById("header").innerHTML = "Benji is a 1st AC";
+          }
+          else if (amusician) {
+            document.getElementById("header").innerHTML = "Benji is a musician";
           }
           else {
-            impressed = false;
-            document.getElementById("buttonImpressum").style.bottom = "20px";
-            document.getElementById("footer").innerHTML = "";
             document.getElementById("header").innerHTML = "Benji.is";
           }
         }
+      }
     </script>
   </body>
 </html>

@@ -52,7 +52,7 @@
   top: 125px;
   left: 200px;
   background: none transparent;
-  //border: 0px;
+  border: 0px;
 }
 .nav {
   position: fixed;
@@ -86,4 +86,20 @@ a:hover {
 
 a:active {
  color: #CCAA99;
+}
+
+.article-drums {
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    font-size: 18px;
+    color: #AA8877
+}
+
+.header-drums {
+    position: fixed;
+    top: 0px;
+    left: 180px;
+    font-size: 30px;
+    color: #CCAA99
 }

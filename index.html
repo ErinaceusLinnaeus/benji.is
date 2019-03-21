@@ -124,6 +124,9 @@
       function func1stac() {
 
         a1stac = true;
+        filmography = false;
+        filmpics = false;
+        filmlinks = false;
         amusician = false;
         musicdrums = false;
         musicbass = false;
@@ -149,6 +152,7 @@
 
       function funcFilmography() {
 
+        a1stac = false;
         filmography = true;
         filmpics = false;
         filmlinks = false;
@@ -159,6 +163,7 @@
 
       function funcFilmPics() {
 
+        a1stac = false;
         filmography = false;
         filmpics = true;
         filmlinks = false;
@@ -168,6 +173,7 @@
 
       function funcFilmLinks() {
 
+        a1stac = false;
         filmography = false;
         filmpics = false;
         filmlinks = true;
@@ -201,6 +207,7 @@
 
       function funcMusicDrums() {
 
+        amusician = false;
         musicdrums = true;
         musicbass = false;
         musicbands = false;
@@ -213,6 +220,7 @@
 
       function funcMusicBass() {
 
+        amusician = false;
         musicdrums = false;
         musicbass = true;
         musicbands = false;
@@ -224,6 +232,7 @@
 
       function funcMusicBands() {
 
+        amusician = false;
         musicdrums = false;
         musicbass = false;
         musicbands = true;
@@ -235,6 +244,7 @@
 
       function funcMusicConcerts() {
 
+        amusician = false;
         musicdrums = false;
         musicbass = false;
         musicbands = false;
@@ -246,6 +256,7 @@
 
       function funcMusicMedia() {
 
+        amusician = false;
         musicdrums = false;
         musicbass = false;
         musicbands = false;
@@ -316,34 +327,30 @@
       }
 
       function funcReloadLatestPage() {
-        if (contacted) {
+        if (contacted)
           funcContactable();
-        }
-        else if (a1stac) {
+        else if (a1stac)
           func1stac();
-          if (filmography)
-            funcFilmography();
-          else if (filmpics)
-            funcFilmPics();
-          else if (filmlinks)
-            funcFilmLinks();
-        }
-        else if (amusician) {
-          funcMusician();
-          if (musicdrums)
-            funcMusicDrums();
-          else if (musicbass)
-            funcMusicBass();
-          else if (musicbands)
-            funcMusicBands();
-          else if (musicconcerts)
-            funcMusicConcerts();
-          else if (musicmedia)
-            funcMusicMedia();
-        }
-        else {
+        else if (filmography)
+          funcFilmography();
+        else if (filmpics)
+          funcFilmPics();
+        else if (filmlinks)
+          funcFilmLinks();
+        else if (amusician)
+        funcMusician();
+        else if (musicdrums)
+          funcMusicDrums();
+        else if (musicbass)
+          funcMusicBass();
+        else if (musicbands)
+          funcMusicBands();
+        else if (musicconcerts)
+          funcMusicConcerts();
+        else if (musicmedia)
+          funcMusicMedia();
+        else
           funcLoad();
-        }
       }
     </script>
   </body>

@@ -32,6 +32,7 @@
       <button id="buttonContactable"class="button" onclick="funcContactable()">...contactable</button>
 
       <button id="buttonImpressum" class="button" onclick="funcImpressum()">IMPRESSUM</button>
+      <button id="buttonDSGVO" class="button" onclick="funcDSGVO()">DSGVO</button>
     </nav>
 
     <section id="section">
@@ -41,11 +42,20 @@
     </section>
 
     <script>
-      //To check if the impressum is clicked.
+      //To check if the impressum/DSGVO is clicked.
       var impressed;
-      //To check the latest opened tab.
+      var datasecured;
+      //Keep track of the latest opened tab.
       var a1stac;
+      var filmography;
+      var filmpics;
+      var filmlinks;
       var amusician;
+      var musicdrums;
+      var musicbass;
+      var musicbands;
+      var musicconcerts;
+      var musicmedia;
       var contacted;
 
       function funcLoad() {
@@ -72,16 +82,37 @@
         document.getElementById("buttonMusicConcerts").style.left = "-600px";
         document.getElementById("buttonMusicMedia").style.top = "360px";
         document.getElementById("buttonMusicMedia").style.left = "-600px";
-        document.getElementById("buttonImpressum").style.bottom = "20px";
+        document.getElementById("buttonImpressum").style.bottom = "50px";
         document.getElementById("buttonImpressum").style.left = "6px";
         document.getElementById("buttonImpressum").style.border = "hidden";
+        document.getElementById("buttonDSGVO").style.bottom = "20px";
+        document.getElementById("buttonDSGVO").style.left = "6px";
+        document.getElementById("buttonDSGVO").style.border = "hidden";
 
         document.getElementById("header").innerHTML = "Benji.is";
+        document.getElementById("iframe").src = "";
+
+        if (impressed) {
+          document.getElementById("footer").innerHTML = "Benjamin Schmid<br>Friedrich-Ebert-Str. 25<br>73730 Esslingen<br><a href=mailto:mail@benji.is>mail@benji.is</a><br>+49 151 28182699<br>USt-ID: DE298312883";
+          document.getElementById("header").innerHTML = "Benji is impressed";
+          document.getElementById("buttonImpressum").style.bottom = "140px";
+        }
+        else
+          document.getElementById("footer").innerHTML = "";
 
         a1stac = false;
+        filmography = false;
+        filmpics = false;
+        filmlinks = false;
         amusician = false;
+        musicdrums = false;
+        musicbass = false;
+        musicbands = false;
+        musicconcerts = false;
+        musicmedia = false;
         contacted = false;
         impressed = false;
+        datasecured = false;
       }
 
       function funcStyleMars() {
@@ -94,6 +125,11 @@
 
         a1stac = true;
         amusician = false;
+        musicdrums = false;
+        musicbass = false;
+        musicbands = false;
+        musicconcerts = false;
+        musicmedia = false;
         contacted = false;
 
         document.getElementById("header").innerHTML = "Benji is a 1st AC";
@@ -113,16 +149,28 @@
 
       function funcFilmography() {
 
+        filmography = true;
+        filmpics = false;
+        filmlinks = false;
+
         document.getElementById("header").innerHTML = "Benji is a 1st AC";
         document.getElementById("iframe").src = "documents/pdf/Filmography.pdf";
       }
 
       function funcFilmPics() {
 
+        filmography = false;
+        filmpics = true;
+        filmlinks = false;
+
         document.getElementById("header").innerHTML = "Benji is a 1st AC";
       }
 
       function funcFilmLinks() {
+
+        filmography = false;
+        filmpics = false;
+        filmlinks = true;
 
         document.getElementById("header").innerHTML = "Benji is a 1st AC";
       }
@@ -130,6 +178,9 @@
       function funcMusician() {
 
         a1stac = false;
+        filmography = false;
+        filmpics = false;
+        filmlinks = false;
         amusician = true;
         contacted = false;
 
@@ -150,26 +201,56 @@
 
       function funcMusicDrums() {
 
+        musicdrums = true;
+        musicbass = false;
+        musicbands = false;
+        musicconcerts = false;
+        musicmedia = false;
+
         document.getElementById("header").innerHTML = "Benji is a musician";
         document.getElementById("iframe").src = "drums.html";
       }
 
       function funcMusicBass() {
 
+        musicdrums = false;
+        musicbass = true;
+        musicbands = false;
+        musicconcerts = false;
+        musicmedia = false;
+
         document.getElementById("header").innerHTML = "Benji is a musician";
       }
 
       function funcMusicBands() {
+
+        musicdrums = false;
+        musicbass = false;
+        musicbands = true;
+        musicconcerts = false;
+        musicmedia = false;
 
         document.getElementById("header").innerHTML = "Benji is a musician";
       }
 
       function funcMusicConcerts() {
 
+        musicdrums = false;
+        musicbass = false;
+        musicbands = false;
+        musicconcerts = true;
+        musicmedia = false;
+
         document.getElementById("header").innerHTML = "Benji is a musician";
       }
 
       function funcMusicMedia() {
+
+        musicdrums = false;
+        musicbass = false;
+        musicbands = false;
+        musicconcerts = false;
+        musicmedia = true;
 
         document.getElementById("header").innerHTML = "Benji is a musician";
       }
@@ -177,7 +258,15 @@
       function funcContactable() {
 
         a1stac = false;
+        filmography = false;
+        filmpics = false;
+        filmlinks = false;
         amusician = false;
+        musicdrums = false;
+        musicbass = false;
+        musicbands = false;
+        musicconcerts = false;
+        musicmedia = false;
         contacted = true;
 
         document.getElementById("iframe").src = "contactable.html";
@@ -197,31 +286,63 @@
         document.getElementById("header").innerHTML = "Benji is contactable";
       }
 
+      function funcDSGVO() {
+
+        if (!datasecured) {
+          datasecured = true;
+          document.getElementById("iframe").src = "documents/pdf/DSGVO.pdf";
+          document.getElementById("header").innerHTML = "Benji is not spying";
+        }
+        else {
+          datasecured = false;
+          funcReloadLatestPage();
+        }
+      }
+
       function funcImpressum() {
 
         if (!impressed) {
           impressed = true;
-          document.getElementById("buttonImpressum").style.bottom = "100px";
+          document.getElementById("buttonImpressum").style.bottom = "140px";
           document.getElementById("footer").innerHTML = "Benjamin Schmid<br>Friedrich-Ebert-Str. 25<br>73730 Esslingen<br><a href=mailto:mail@benji.is>mail@benji.is</a><br>+49 151 28182699<br>USt-ID: DE298312883";
           document.getElementById("header").innerHTML = "Benji is impressed";
         }
         else {
           impressed = false;
-          document.getElementById("buttonImpressum").style.bottom = "20px";
+          document.getElementById("buttonImpressum").style.bottom = "50px";
           document.getElementById("footer").innerHTML = "";
+          funcReloadLatestPage();
+        }
+      }
 
-          if (contacted) {
-            document.getElementById("header").innerHTML = "Benji is contactable";
-          }
-          else if (a1stac) {
-            document.getElementById("header").innerHTML = "Benji is a 1st AC";
-          }
-          else if (amusician) {
-            document.getElementById("header").innerHTML = "Benji is a musician";
-          }
-          else {
-            document.getElementById("header").innerHTML = "Benji.is";
-          }
+      function funcReloadLatestPage() {
+        if (contacted) {
+          funcContactable();
+        }
+        else if (a1stac) {
+          func1stac();
+          if (filmography)
+            funcFilmography();
+          else if (filmpics)
+            funcFilmPics();
+          else if (filmlinks)
+            funcFilmLinks();
+        }
+        else if (amusician) {
+          funcMusician();
+          if (musicdrums)
+            funcMusicDrums();
+          else if (musicbass)
+            funcMusicBass();
+          else if (musicbands)
+            funcMusicBands();
+          else if (musicconcerts)
+            funcMusicConcerts();
+          else if (musicmedia)
+            funcMusicMedia();
+        }
+        else {
+          funcLoad();
         }
       }
     </script>

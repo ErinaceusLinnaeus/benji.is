@@ -123,11 +123,13 @@
 
       function func1stac() {
 
+        document.getElementById("header").innerHTML = "Benji is a 1st AC";
+
         if (!a1stac) {
-          document.getElementById("header").innerHTML = "Benji is a 1st AC";
+
           document.getElementById("iframe").src = "a1stac.html";
 
-          if (amusician) {
+          if (amusician || musicdrums || musicbass || musicbands || musicconcerts || musicmedia) {
             window.setTimeout(function(){document.getElementById("buttonAMusician").style.top = "170px"},10);
             window.setTimeout(function(){document.getElementById("buttonAMusician").style.top = "180px"},20);
             window.setTimeout(function(){document.getElementById("buttonAMusician").style.top = "190px"},30);
@@ -203,47 +205,50 @@
           musicconcerts = false;
           musicmedia = false;
           contacted = false;
+          datasecured = false;
         }
       }
 
       function funcFilmography() {
 
-        //a1stac = false;
+        document.getElementById("header").innerHTML = "Benji is a 1st AC";
+        document.getElementById("iframe").src = "documents/pdf/Filmography.pdf";
+
+        a1stac = false;
         filmography = true;
         filmpics = false;
         filmlinks = false;
-
-        document.getElementById("header").innerHTML = "Benji is a 1st AC";
-        document.getElementById("iframe").src = "documents/pdf/Filmography.pdf";
       }
 
       function funcFilmPics() {
 
-        //a1stac = false;
+        document.getElementById("header").innerHTML = "Benji is a 1st AC";
+
+        a1stac = false;
         filmography = false;
         filmpics = true;
         filmlinks = false;
-
-        document.getElementById("header").innerHTML = "Benji is a 1st AC";
       }
 
       function funcFilmLinks() {
 
-        //a1stac = false;
+        document.getElementById("header").innerHTML = "Benji is a 1st AC";
+
+        a1stac = false;
         filmography = false;
         filmpics = false;
         filmlinks = true;
-
-        document.getElementById("header").innerHTML = "Benji is a 1st AC";
       }
 
       function funcMusician() {
 
+        document.getElementById("header").innerHTML = "Benji is a musician";
+
         if (!amusician) {
-          document.getElementById("header").innerHTML = "Benji is a musician";
+
           document.getElementById("iframe").src = "amusician.html";
 
-          if (!a1stac) {
+          if (contacted) {
             window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "210px"},10);
             window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "220px"},20);
             window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "230px"},30);
@@ -271,7 +276,7 @@
             window.setTimeout(function(){document.getElementById("buttonMusicConcerts").style.left = "60px"},120);
             window.setTimeout(function(){document.getElementById("buttonMusicMedia").style.left = "60px"},160);
           }
-          else {
+          if (a1stac || filmography || filmpics || filmlinks) {
             window.setTimeout(function(){document.getElementById("buttonFilmLinks").style.left = "-600px"},40);
             window.setTimeout(function(){document.getElementById("buttonFilmPics").style.left = "-600px"},80);
             window.setTimeout(function(){document.getElementById("buttonFilmography").style.left = "-600px"},120);
@@ -311,75 +316,79 @@
           filmlinks = false;
           amusician = true;
           contacted = false;
+          datasecured = false;
         }
       }
 
       function funcMusicDrums() {
 
-        //amusician = false;
+        document.getElementById("header").innerHTML = "Benji is a musician";
+        document.getElementById("iframe").src = "drums.html";
+
+        amusician = false;
         musicdrums = true;
         musicbass = false;
         musicbands = false;
         musicconcerts = false;
         musicmedia = false;
 
-        document.getElementById("header").innerHTML = "Benji is a musician";
-        document.getElementById("iframe").src = "drums.html";
       }
 
       function funcMusicBass() {
 
-        //amusician = false;
+        document.getElementById("header").innerHTML = "Benji is a musician";
+
+        amusician = false;
         musicdrums = false;
         musicbass = true;
         musicbands = false;
         musicconcerts = false;
         musicmedia = false;
-
-        document.getElementById("header").innerHTML = "Benji is a musician";
       }
 
       function funcMusicBands() {
 
-        //amusician = false;
+        document.getElementById("header").innerHTML = "Benji is a musician";
+
+        amusician = false;
         musicdrums = false;
         musicbass = false;
         musicbands = true;
         musicconcerts = false;
         musicmedia = false;
-
-        document.getElementById("header").innerHTML = "Benji is a musician";
       }
 
       function funcMusicConcerts() {
 
-        //amusician = false;
+        document.getElementById("header").innerHTML = "Benji is a musician";
+
+        amusician = false;
         musicdrums = false;
         musicbass = false;
         musicbands = false;
         musicconcerts = true;
         musicmedia = false;
-
-        document.getElementById("header").innerHTML = "Benji is a musician";
       }
 
       function funcMusicMedia() {
 
-        //amusician = false;
+        document.getElementById("header").innerHTML = "Benji is a musician";
+
+        amusician = false;
         musicdrums = false;
         musicbass = false;
         musicbands = false;
         musicconcerts = false;
         musicmedia = true;
-
-        document.getElementById("header").innerHTML = "Benji is a musician";
       }
 
       function funcContactable() {
 
+        document.getElementById("header").innerHTML = "Benji is contactable";
+
         if (!contacted) {
+
           document.getElementById("iframe").src = "contactable.html";
-          document.getElementById("header").innerHTML = "Benji is contactable";
 
           if (a1stac) {
             window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "310px"},10);
@@ -453,6 +462,7 @@
           musicconcerts = false;
           musicmedia = false;
           contacted = true;
+          datasecured = false;
         }
       }
 
@@ -486,6 +496,9 @@
       }
 
       function funcReloadLatestPage() {
+        if (impressed)
+          funcImpressum();
+
         if (contacted)
           funcContactable();
         else if (a1stac)
@@ -497,7 +510,7 @@
         else if (filmlinks)
           funcFilmLinks();
         else if (amusician)
-        funcMusician();
+          funcMusician();
         else if (musicdrums)
           funcMusicDrums();
         else if (musicbass)
@@ -508,6 +521,8 @@
           funcMusicConcerts();
         else if (musicmedia)
           funcMusicMedia();
+        else if (datasecured)
+          funcDSGVO();
         else
           funcLoad();
       }

@@ -183,26 +183,79 @@
 
       function funcMusician() {
 
+
+        document.getElementById("header").innerHTML = "Benji is a musician";
+        document.getElementById("iframe").src = "amusician.html";
+
+
+        if (!a1stac) {
+          document.getElementById("buttonMusicDrums").style.left = "60px";
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "210px"},10);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "220px"},20);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "230px"},30);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "240px"},40);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "250px"},50);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "260px"},60);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "270px"},70);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "280px"},80);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "290px"},90);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "300px"},100);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "310px"},110);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "320px"},120);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "330px"},130);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "340px"},140);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "350px"},150);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "360px"},160);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "370px"},170);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "380px"},180);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "390px"},190);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "400px"},200);
+
+          window.setTimeout(function(){document.getElementById("buttonMusicBass").style.left = "60px"},40);
+          window.setTimeout(function(){document.getElementById("buttonMusicBands").style.left = "60px"},80);
+          window.setTimeout(function(){document.getElementById("buttonMusicConcerts").style.left = "60px"},120);
+          window.setTimeout(function(){document.getElementById("buttonMusicMedia").style.left = "60px"},160);
+        }
+        else {
+          document.getElementById("buttonFilmography").style.left = "-600px";
+          document.getElementById("buttonFilmPics").style.left = "-600px";
+          document.getElementById("buttonFilmLinks").style.left = "-600px";
+
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "330px"},15);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "340px"},30);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "350px"},45);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "360px"},60);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "370px"},75);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "380px"},90);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "390px"},105);
+          window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "400px"},120);
+
+          window.setTimeout(function(){document.getElementById("buttonAMusician").style.top = "270px"},10);
+          window.setTimeout(function(){document.getElementById("buttonAMusician").style.top = "260px"},20);
+          window.setTimeout(function(){document.getElementById("buttonAMusician").style.top = "250px"},30);
+          window.setTimeout(function(){document.getElementById("buttonAMusician").style.top = "240px"},40);
+          window.setTimeout(function(){document.getElementById("buttonAMusician").style.top = "230px"},50);
+          window.setTimeout(function(){document.getElementById("buttonAMusician").style.top = "220px"},60);
+          window.setTimeout(function(){document.getElementById("buttonAMusician").style.top = "210px"},70);
+          window.setTimeout(function(){document.getElementById("buttonAMusician").style.top = "200px"},80);
+          window.setTimeout(function(){document.getElementById("buttonAMusician").style.top = "190px"},90);
+          window.setTimeout(function(){document.getElementById("buttonAMusician").style.top = "180px"},100);
+          window.setTimeout(function(){document.getElementById("buttonAMusician").style.top = "170px"},110);
+          window.setTimeout(function(){document.getElementById("buttonAMusician").style.top = "160px"},120);
+
+          window.setTimeout(function(){document.getElementById("buttonMusicDrums").style.left = "60px"},80);
+          window.setTimeout(function(){document.getElementById("buttonMusicBass").style.left = "60px"},40);
+          document.getElementById("buttonMusicBands").style.left = "60px";
+          document.getElementById("buttonMusicConcerts").style.left = "60px";
+          window.setTimeout(function(){document.getElementById("buttonMusicMedia").style.left = "60px"},60);
+        }
+
         a1stac = false;
         filmography = false;
         filmpics = false;
         filmlinks = false;
         amusician = true;
         contacted = false;
-
-        document.getElementById("header").innerHTML = "Benji is a musician";
-        document.getElementById("iframe").src = "amusician.html";
-
-        document.getElementById("buttonAMusician").style.top = "160px";
-        document.getElementById("buttonContactable").style.top = "400px";
-        document.getElementById("buttonFilmography").style.left = "-600px";
-        document.getElementById("buttonFilmPics").style.left = "-600px";
-        document.getElementById("buttonFilmLinks").style.left = "-600px";
-        document.getElementById("buttonMusicDrums").style.left = "60px";
-        document.getElementById("buttonMusicBass").style.left = "60px";
-        document.getElementById("buttonMusicBands").style.left = "60px";
-        document.getElementById("buttonMusicConcerts").style.left = "60px";
-        document.getElementById("buttonMusicMedia").style.left = "60px";
       }
 
       function funcMusicDrums() {

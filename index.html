@@ -125,7 +125,7 @@
 
         document.getElementById("header").innerHTML = "Benji is a 1st AC";
 
-        if (!a1stac) {
+        if (!a1stac && !filmography && !filmpics && !filmlinks) {
 
           document.getElementById("iframe").src = "a1stac.html";
 
@@ -244,7 +244,7 @@
 
         document.getElementById("header").innerHTML = "Benji is a musician";
 
-        if (!amusician) {
+        if (!amusician && !musicdrums && !musicbass && !musicbands && !musicconcerts && !musicmedia) {
 
           document.getElementById("iframe").src = "amusician.html";
 
@@ -390,7 +390,7 @@
 
           document.getElementById("iframe").src = "contactable.html";
 
-          if (a1stac) {
+          if (a1stac || filmography || filmpics || filmlinks) {
             window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "310px"},10);
             window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "300px"},20);
             window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "290px"},30);
@@ -421,7 +421,7 @@
             window.setTimeout(function(){document.getElementById("buttonFilmPics").style.left = "-600px"},80);
             window.setTimeout(function(){document.getElementById("buttonFilmography").style.left = "-600px"},120);
           }
-          else if (amusician) {
+          else if (amusician || musicdrums || musicbass || musicbands || musicconcerts || musicmedia) {
             window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "400px"},10);
             window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "390px"},20);
             window.setTimeout(function(){document.getElementById("buttonContactable").style.top = "380px"},30);

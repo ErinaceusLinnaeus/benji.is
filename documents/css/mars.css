@@ -113,13 +113,21 @@ a:active {
   padding: 10px;
 }
 
-.grid-concerts-head {
+.grid-bands {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: auto auto auto auto auto auto;
+  //background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-head {
   padding: 20px;
   font-size: 25px;
   text-align: center;
 }
 
-.grid-concerts-item {
+.grid-item {
   padding: 7px;
   font-size: 18px;
   text-align: center;

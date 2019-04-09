@@ -89,7 +89,15 @@ a:active {
  color: #CCAA99;
 }
 
-.article-drums {
+.header-sub {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    font-size: 30px;
+    color: #CCAA99
+}
+
+.article-sub {
     position: fixed;
     top: 50px;
     left: 0px;
@@ -97,10 +105,22 @@ a:active {
     color: #AA8877
 }
 
-.header-drums {
-    position: fixed;
-    top: 0px;
-    left: 300px;
-    font-size: 30px;
-    color: #CCAA99
+.grid-concerts {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: auto auto auto auto auto auto;
+  //background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-concerts-head {
+  padding: 20px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.grid-concerts-item {
+  padding: 7px;
+  font-size: 18px;
+  text-align: center;
 }

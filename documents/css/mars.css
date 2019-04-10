@@ -9,7 +9,7 @@
 }
 
 .footer {
-  color: #665533
+  color: #887755;
 }
 
 .body {
@@ -18,11 +18,11 @@
 }
 
 a:link {
- color: #665533;
+ color: #887755;
 }
 
 a:visited {
- color: #665533;
+ color: #887755;
 }
 
 a:hover {
@@ -30,7 +30,7 @@ a:hover {
 }
 
 a:active {
- color: #665533;
+ color: #887755;
 }
 
 .header-sub {

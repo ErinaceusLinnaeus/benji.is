@@ -17,6 +17,7 @@
 
     <nav id="nav" class="nav">
       <button id="buttonStyleMars" class="buttonStyleMars" onclick="funcStyleMars()">O</button>
+      <button id="buttonStyleVik" class="buttonStyleVik" onclick="funcStyleVik()">O</button>
 
       <button id="buttonA1stac"class="button" onclick="func1stac()">...a 1st AC</button>
       <button id="buttonFilmography"class="button" onclick="funcFilmography()">Filmography</button>
@@ -43,6 +44,10 @@
     </section>
 
     <script>
+      //Marking the color scheme
+        //0 = mars
+        //1 == vik
+      var color = 0;
       //To check if the impressum/DSGVO is clicked.
       var impressed;
       var datasecured;
@@ -118,8 +123,16 @@
 
       function funcStyleMars() {
 
+        color = 0;
         document.getElementById("colorscheme").href = "documents/css/mars.css";
         document.getElementById("header").innerHTML = "Benji is mars-gazing";
+      }
+
+      function funcStyleVik() {
+
+        color = 1;
+        document.getElementById("colorscheme").href = "documents/css/vik.css";
+        document.getElementById("header").innerHTML = "Benji is &iacute; M&yacute;rdal";
       }
 
       function func1stac() {

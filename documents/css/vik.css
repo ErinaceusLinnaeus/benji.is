@@ -1,0 +1,42 @@
+
+
+.button {
+  color: #448877;
+}
+
+.header {
+  color: #227755;
+}
+
+.footer {
+  color: #006633;
+}
+
+.body {
+  background-image: url(../pics/vik.jpg);
+  background-color: #DF7401;
+}
+
+a:link {
+ color: #006633;
+}
+
+a:visited {
+ color: #006633;
+}
+
+a:hover {
+ color: #227755;
+}
+
+a:active {
+ color: #006633;
+}
+
+.header-sub {
+    color: #227755
+}
+
+.article-sub {
+    color: #448877
+}

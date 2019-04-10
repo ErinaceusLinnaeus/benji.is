@@ -8,9 +8,13 @@
   color: #CCAA99;
 }
 
-.body {
-  background-color: #000000;
+.footer {
   color: #665533
+}
+
+.body {
+  background-image: url(../pics/mars.jpg);
+  background-color: #000000;
 }
 
 a:link {
@@ -18,7 +22,7 @@ a:link {
 }
 
 a:visited {
- color: #CCAA99;
+ color: #665533;
 }
 
 a:hover {
@@ -26,7 +30,7 @@ a:hover {
 }
 
 a:active {
- color: #CCAA99;
+ color: #665533;
 }
 
 .header-sub {

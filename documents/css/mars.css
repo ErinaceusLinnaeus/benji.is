@@ -1,78 +1,18 @@
 
 
-
-.buttonStyleMars {
-  position: fixed;
-  top: 5px;
-  left: 5px;
-  background: none transparent;
-  border: hidden;
-  color: #AA8877;
-  text-align: left;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  padding: 10px;
-  width: 120px;
-  font-size:10px;
-}
 .button {
-  position: fixed;
-  background: none transparent;
-  border: hidden;
-  border-left: 3px double #333304;
   color: #AA8877;
-  text-align: left;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  padding: 10px;
-  width: 120px;
-  font-size:15px;
 }
+
 .header {
-  position: fixed;
-  top: 40px;
-  left: 40px;
-  background: none transparent;
-  border-left: 3px double #333304;
   color: #CCAA99;
-  text-align: left;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  padding: 10px;
-  width: 350px;
-  font-size:30px;
 }
-.iframe {
-  width: 800px;
-  height: 800px;
-  position: absolute;
-  top: 125px;
-  left: 200px;
-  background: none transparent;
-  border: 0px;
-}
-.nav {
-  position: fixed;
-  top: 120px;
-  left: 40px;
-}
-.footer {
-  position: fixed;
-  bottom: 55px;
-  left: 15px;
-  font-size: 12px;
+
+.body {
+  background-color: #000000;
   color: #665533
 }
-.body {
-  background-image: url(../pics/mars.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color: #000000;
-  background-size: cover;
-}
+
 a:link {
  color: #665533;
 }
@@ -90,47 +30,9 @@ a:active {
 }
 
 .header-sub {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    font-size: 30px;
     color: #CCAA99
 }
 
 .article-sub {
-    position: fixed;
-    top: 50px;
-    left: 0px;
-    font-size: 18px;
     color: #AA8877
-}
-
-.grid-concerts {
-  display: grid;
-  grid-column-gap: 10px;
-  grid-template-columns: auto auto auto auto auto auto;
-  //background-color: #2196F3;
-  padding: 10px;
-  overflow: auto;
-  height: 700px;
-}
-
-.grid-bands {
-  display: grid;
-  grid-column-gap: 10px;
-  grid-template-columns: auto auto auto auto auto;
-  //background-color: #2196F3;
-  padding: 10px;
-}
-
-.grid-head {
-  padding: 20px;
-  font-size: 25px;
-  text-align: center;
-}
-
-.grid-item {
-  padding: 7px;
-  font-size: 18px;
-  text-align: center;
 }

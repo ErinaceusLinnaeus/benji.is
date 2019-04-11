@@ -48,11 +48,13 @@
       </article-links>
 
       <article-drums id="article-drums" class="article">
+
         <img src="documents/pics/Set2019.png" alt="Set2019.png"; style="position: absolute;
-                                                                        top: 50px;
-                                                                        left: 200px;
-                                                                        width:450px;
-                                                                        height:400px;")>
+                                                                        top: 10px;
+                                                                        left: 80px;
+                                                                        width:600px;
+                                                                        height:452px;")>
+
         <p style="font-size: 22px;">
           Walnut shells:<br>
         </p>
@@ -367,6 +369,10 @@
       <article-media id="article-media" class="article">
       </article-media>
 
+      <article-contact id="article-contact" class="article">
+        See impressum or Filmography...
+      </article-contact>
+
     </section>
 
     <script>
@@ -474,6 +480,8 @@
         document.getElementById("article-bands").style.visibility = "hidden";
         document.getElementById("article-concerts").style.visibility = "hidden";
         document.getElementById("article-media").style.visibility = "hidden";
+
+        document.getElementById("article-contact").style.visibility = "hidden";
 
         if (!a1stac && !filmography && !filmpics && !filmlinks) {
 
@@ -613,6 +621,8 @@
         document.getElementById("article-bands").style.visibility = "hidden";
         document.getElementById("article-concerts").style.visibility = "hidden";
         document.getElementById("article-media").style.visibility = "hidden";
+
+        document.getElementById("article-contact").style.visibility = "hidden";
 
         if (!amusician && !musicdrums && !musicbass && !musicbands && !musicconcerts && !musicmedia) {
 
@@ -793,6 +803,8 @@
         document.getElementById("article-concerts").style.visibility = "hidden";
         document.getElementById("article-media").style.visibility = "hidden";
 
+        document.getElementById("article-contact").style.visibility = "visible";
+
         if (!contacted) {
 
           if (a1stac || filmography || filmpics || filmlinks) {
@@ -886,6 +898,8 @@
           document.getElementById("article-bands").style.visibility = "hidden";
           document.getElementById("article-concerts").style.visibility = "hidden";
           document.getElementById("article-media").style.visibility = "hidden";
+
+          document.getElementById("article-contact").style.visibility = "hidden";
         }
         else {
           datasecured = false;

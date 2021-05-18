@@ -100,7 +100,7 @@
 .grid-concerts {
   display: grid;
   grid-column-gap: 10px;
-  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
   padding: 10px;
   overflow: auto;
   height: 700px;
@@ -110,6 +110,13 @@
   display: grid;
   grid-column-gap: 10px;
   grid-template-columns: auto auto auto auto auto;
+  padding: 10px;
+}
+
+.grid-release {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: auto auto auto auto auto auto auto;
   padding: 10px;
 }
 
@@ -130,7 +137,12 @@
   text-align: center;
 }
 
+.grid-release-separator {
+  grid-column: 1 / 8;
+  text-align: center;
+}
+
 .grid-concerts-separator {
-  grid-column: 1 / 7;
+  grid-column: 1 / 6;
   text-align: center;
 }
